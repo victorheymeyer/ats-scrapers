@@ -55,6 +55,7 @@ def test_bs4_scrapers_raise_scraper_error_when_parsing_without_beautifulsoup4() 
                 parse()
             except ScraperError as exc:
                 assert "beautifulsoup4" in str(exc)
+                assert "ats-scrapers[scrapers]" in str(exc)
             else:
                 raise AssertionError("expected ScraperError")
         """
